@@ -1,0 +1,56 @@
+# RabbitMQ Version Configuration
+current: "3.13-management"
+available:
+  - version: "3.12-management"
+    image: "rabbitmq:3.12-management"
+    description: "RabbitMQ 3.12 with Management UI - Stable"
+    features:
+      - "Management UI"
+      - "AMQP 0-9-1"
+      - "Streams"
+      - "Shovel"
+  - version: "3.13-management"
+    image: "rabbitmq:3.13-management"
+    description: "RabbitMQ 3.13 with Management UI - Latest stable"
+    features:
+      - "All 3.12 features"
+      - "Improved Performance"
+      - "Enhanced Security"
+      - "Better Streams Support"
+  - version: "3.13"
+    image: "rabbitmq:3.13"
+    description: "RabbitMQ 3.13 without Management UI - Lightweight"
+    features:
+      - "AMQP 0-9-1"
+      - "Streams"
+      - "Shovel"
+      - "No Web UI (lighter)"
+  - version: "3.14-management"
+    image: "rabbitmq:3.14-management"
+    description: "RabbitMQ 3.14 with Management UI - Latest"
+    features:
+      - "All 3.13 features"
+      - "Latest Updates"
+      - "Performance Improvements"
+    experimental: false
+
+# Environment variables for each version
+environments:
+  "3.12-management":
+    RABBITMQ_DEFAULT_USER: "admin"
+    RABBITMQ_DEFAULT_PASS: "admin123"
+    RABBITMQ_DEFAULT_VHOST: "/"
+  "3.13-management":
+    RABBITMQ_DEFAULT_USER: "admin"
+    RABBITMQ_DEFAULT_PASS: "admin123"
+    RABBITMQ_DEFAULT_VHOST: "/"
+  "3.13":
+    RABBITMQ_DEFAULT_USER: "admin"
+    RABBITMQ_DEFAULT_PASS: "admin123"
+    RABBITMQ_DEFAULT_VHOST: "/"
+  "3.14-management":
+    RABBITMQ_DEFAULT_USER: "admin"
+    RABBITMQ_DEFAULT_PASS: "admin123"
+    RABBITMQ_DEFAULT_VHOST: "/"
+
+

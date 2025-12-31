@@ -1,0 +1,47 @@
+# MinIO Version Configuration
+current: "latest"
+available:
+  - version: "RELEASE.2023-12-20T10-07-38Z"
+    image: "minio/minio:RELEASE.2023-12-20T10-07-38Z"
+    description: "MinIO December 2023 - Stable version"
+    features:
+      - "S3 API compatibility"
+      - "Web console"
+      - "Multi-tenant support"
+  - version: "RELEASE.2024-01-16T16-07-38Z"
+    image: "minio/minio:RELEASE.2024-01-16T16-07-38Z"
+    description: "MinIO January 2024 - Stable version"
+    features:
+      - "All previous features"
+      - "Performance improvements"
+      - "Security enhancements"
+  - version: "latest"
+    image: "minio/minio:latest"
+    description: "MinIO Latest - Most recent version"
+    features:
+      - "All previous features"
+      - "Latest improvements"
+      - "Bug fixes"
+  - version: "edge"
+    image: "minio/minio:edge"
+    description: "MinIO Edge - Development version"
+    features:
+      - "All latest features"
+      - "Experimental features"
+      - "Cutting-edge updates"
+    experimental: true
+
+# Environment variables for each version
+environments:
+  "RELEASE.2023-12-20T10-07-38Z":
+    MINIO_ROOT_USER: "admin"
+    MINIO_ROOT_PASSWORD: "abc123456"
+  "RELEASE.2024-01-16T16-07-38Z":
+    MINIO_ROOT_USER: "admin"
+    MINIO_ROOT_PASSWORD: "abc123456"
+  "latest":
+    MINIO_ROOT_USER: "admin"
+    MINIO_ROOT_PASSWORD: "abc123456"
+  "edge":
+    MINIO_ROOT_USER: "admin"
+    MINIO_ROOT_PASSWORD: "abc123456"

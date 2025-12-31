@@ -1,0 +1,51 @@
+# PostgreSQL Version Configuration
+current: "16"
+available:
+  - version: "14"
+    image: "postgres:14"
+    description: "PostgreSQL 14 - LTS version"
+    features:
+      - "JSON improvements"
+      - "Performance enhancements"
+      - "Security improvements"
+  - version: "15"
+    image: "postgres:15"
+    description: "PostgreSQL 15 - Stable version"
+    features:
+      - "All 14 features"
+      - "MERGE command"
+      - "Improved performance"
+  - version: "16"
+    image: "postgres:16"
+    description: "PostgreSQL 16 - Latest stable"
+    features:
+      - "All 15 features"
+      - "Enhanced JSON support"
+      - "Better parallel processing"
+  - version: "17"
+    image: "postgres:17"
+    description: "PostgreSQL 17 - Latest (experimental)"
+    features:
+      - "All 16 features"
+      - "New SQL features"
+      - "Performance improvements"
+    experimental: true
+
+# Environment variables for each version
+environments:
+  "14":
+    POSTGRES_USER: "admin"
+    POSTGRES_PASSWORD: "abc123"
+    POSTGRES_DB: "kjc_dev"
+  "15":
+    POSTGRES_USER: "admin"
+    POSTGRES_PASSWORD: "abc123"
+    POSTGRES_DB: "kjc_dev"
+  "16":
+    POSTGRES_USER: "admin"
+    POSTGRES_PASSWORD: "abc123"
+    POSTGRES_DB: "kjc_dev"
+  "17":
+    POSTGRES_USER: "admin"
+    POSTGRES_PASSWORD: "abc123"
+    POSTGRES_DB: "kjc_dev"

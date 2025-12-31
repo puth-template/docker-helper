@@ -1,0 +1,37 @@
+# MongoDB Version Configuration
+current: "7.0"
+available:
+  - version: "6.0"
+    image: "mongo:6.0"
+    description: "MongoDB 6.0 - Stable version"
+    features:
+      - "Time Series Collections"
+      - "Change Streams"
+      - "Aggregation Pipeline"
+  - version: "7.0"
+    image: "mongo:7.0"
+    description: "MongoDB 7.0 - Latest stable"
+    features:
+      - "All 6.0 features"
+      - "Improved Performance"
+      - "Enhanced Security"
+  - version: "8.0"
+    image: "mongo:8.0"
+    description: "MongoDB 8.0 - Latest (experimental)"
+    features:
+      - "All 7.0 features"
+      - "New Query Operators"
+      - "Enhanced Indexing"
+    experimental: true
+
+# Environment variables for each version
+environments:
+  "6.0":
+    MONGO_INITDB_ROOT_USERNAME: "root"
+    MONGO_INITDB_ROOT_PASSWORD: "abc123"
+  "7.0":
+    MONGO_INITDB_ROOT_USERNAME: "root"
+    MONGO_INITDB_ROOT_PASSWORD: "abc123"
+  "8.0":
+    MONGO_INITDB_ROOT_USERNAME: "root"
+    MONGO_INITDB_ROOT_PASSWORD: "abc123"

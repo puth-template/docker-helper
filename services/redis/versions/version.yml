@@ -1,0 +1,43 @@
+# Redis Version Configuration
+current: "7.2"
+available:
+  - version: "6.2"
+    image: "redis:6.2"
+    description: "Redis 6.2 - LTS version"
+    features:
+      - "ACL improvements"
+      - "Client caching"
+      - "Memory usage optimization"
+  - version: "7.0"
+    image: "redis:7.0"
+    description: "Redis 7.0 - Stable version"
+    features:
+      - "All 6.2 features"
+      - "Function library"
+      - "Better memory efficiency"
+  - version: "7.2"
+    image: "redis:7.2"
+    description: "Redis 7.2 - Latest stable"
+    features:
+      - "All 7.0 features"
+      - "Enhanced performance"
+      - "Better clustering"
+  - version: "8.0"
+    image: "redis:8.0"
+    description: "Redis 8.0 - Latest (experimental)"
+    features:
+      - "All 7.2 features"
+      - "New data structures"
+      - "Advanced features"
+    experimental: true
+
+# Environment variables for each version
+environments:
+  "6.2":
+    REDIS_PASSWORD: ""
+  "7.0":
+    REDIS_PASSWORD: ""
+  "7.2":
+    REDIS_PASSWORD: ""
+  "8.0":
+    REDIS_PASSWORD: ""

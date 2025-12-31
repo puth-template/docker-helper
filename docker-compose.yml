@@ -1,0 +1,23 @@
+version: '3.9'
+
+# Import services from individual service directories
+include:
+  - services/mongo/docker-compose.yml
+  - services/postgres/docker-compose.yml
+  - services/redis/docker-compose.yml
+  - services/minio/docker-compose.yml
+  - services/rabbitmq/docker-compose.yml
+  - services/kafka/docker-compose.yml
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mongo_data:
+  postgres_data:
+  redis_data:
+  minio_data:
+  rabbitmq_data:
+  rabbitmq_logs:
+  kafka_data:
